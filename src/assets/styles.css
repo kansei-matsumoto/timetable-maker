@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+html,body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#workspace {
+  height: 100%;
+  display: flex;
+}
+
+#subject-boxes,#time-table {
+  height: 100%;
+  overflow-y: auto; /* ← それぞれ縦スクロール可能に */
+  padding: 16px;
+  border-right: 2px solid gray; /* ← 左右の境界線 */
+}
+
+#subject-boxes {
+  flex:1
+}
+
+#time-table {
+  flex: 9;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  line-height: 50px;
+  font-size: 20px;
+}
+
+li:hover {
+  background-color: #bdbdbd;
+  cursor: pointer;
+}
+
+#sidebar-contents {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: lightgray;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease;
+  z-index: 10;
+}
+
+/* 表示時（activeクラスが付与された時） */
+#sidebar-contents.active {
+  right: 0;
+}
+
+/* サイドバー右端のトグルバー */
+#sidebar-toggle {
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background-color: lightgray;
+  cursor: pointer;
+  border-top-left-radius: 20px;   /* ← 左上を丸く */
+  border-bottom-left-radius: 20px; /* ← 左下を丸く */
+  transition: background-color 0.3s,right 0.3s ease;
+  z-index: 11;
+  font-size: 30px;
+  position: absolute;
+  text-align: center;
+  line-height: 100vh;
+}
+
+#sidebar-toggle:hover {
+  background-color: #bdbdbd;
+}
+
+#sidebar-contents.active + #sidebar-toggle {
+  right: 250px; /* サイドバーの幅分だけ左へ移動 */
+}

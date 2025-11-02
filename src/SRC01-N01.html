@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="icon" href="../public/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timetable Maker</title>
+    <script type="module" src="./scripts/main.ts" defer></script>
+  </head>
+
+  <body>
+    <div id="workspace">
+      <div id="subject-boxes">
+        <h3>Subject Boxes Space</h3>
+      </div>
+    
+      <div id="time-table">
+        <h3>TimeTable Space</h3>
+        <ul>
+          <li id="src01-e01" class="modal-button">SR01-E01</li>
+          <li id="src01-w01" class="modal-button">SR01-W01</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="sidebar-contents">  
+      <h3>サイドメニュー</h3>
+      <ul>
+        <li id="src02-e01" class="modal-button">SR02-E01</li>
+        <li id="src02-w01" class="modal-button">SR02-W01</li>
+        <li id="src02-n01" class="modal-button">SR02-N01</li>
+        <li id="src02-n02" class="modal-button">SR02-N02</li>
+        <li id="src02-n03" class="modal-button">SR02-N03</li>
+      </ul>
+    </div>
+    <div id="sidebar-toggle">|||</div>
+    
+    <dialog id="modal-src01-e01">
+      <h2>SRC01-E01 エラー画面画面</h2>
+      <button id="close-src01-e01">キャンセル</button>
+    </dialog>
+
+    <dialog id="modal-src01-w01">
+      <h2>SRC01-W01 警告画面</h2>
+      <button id="close-src01-w01">キャンセル</button>
+    </dialog>
+
+    <dialog id="modal-src02-n01">
+      <h2>SRC02-N01 新規作成画面</h2>
+      <button id="close-src02-n01">キャンセル</button>
+    </dialog>
+
+    <dialog id="modal-src02-n02">
+      <h2>SRC02-N02 テンプレートインポート・エクスポート画面</h2>
+      <button id="close-src02-n02">キャンセル</button>
+    </dialog>
+
+    <dialog id="modal-src02-n03">
+      <h2>SRC02-N03 状態確認画面</h2>
+      <button id="close-src02-n03">キャンセル</button>
+    </dialog>    
+
+    <dialog id="modal-src02-e01">
+      <h2>SRC02-E01 エラー画面</h2>
+      <button id="close-src02-e01">キャンセル</button>
+    </dialog>
+
+    <dialog id="modal-src02-w01">
+      <h2>SRC02-W01 警告画面</h2>
+      <button id="close-src02-w01">キャンセル</button>
+    </dialog>
+
+    
+
+  </body>
+</html>
