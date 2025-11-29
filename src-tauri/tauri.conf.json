@@ -5,7 +5,7 @@
   "identifier": "jp.example.timetable-maker",
   "build": {
     "beforeDevCommand": "npm run dev",
-    "devUrl": "http://localhost:1420",
+    "devUrl": "http://localhost:1420/SRC01-N01.html",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },

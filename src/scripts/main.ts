@@ -1,7 +1,5 @@
 import { invoke } from "@tauri-apps/api/core";
 
-
-
 window.addEventListener("DOMContentLoaded", () => {
   
   // サイドバーの制御
@@ -35,8 +33,9 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 async function importExcel() {
-  const result = await invoke("importExcel", {
-    path: "../../template1.xlsx"
+  const result = await invoke("import_excel", {
+    // pwd:src-tauri
+    xlPath: "./template1.xlsx",
   });
   console.log(result);
 }
