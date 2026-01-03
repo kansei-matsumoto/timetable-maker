@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
 async function importExcel() {
   const result = await invoke("import_excel", {
     // pwd:src-tauri
-    xlPath: "./template1.xlsx",
+    xlPath: "./template_01.xlsm",
   });
   console.log(result);
 }
